@@ -1,6 +1,6 @@
-import { Text, StyleSheet, TouchableWithoutFeedback } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
+import { Link } from "react-router-native";
 import theme from "../../theme";
-import { View } from "react-native-web";
 
 const styles = StyleSheet.create({
     text: {
@@ -11,13 +11,13 @@ const styles = StyleSheet.create({
     }
 });
 
-const AppBarTab = ({ children }) => {
+const AppBarTab = ({ children, link }) => {
     return (
-        <TouchableWithoutFeedback>
+        <Link to={link}>
             <View style={styles.container}>
                 <Text style={styles.text}>{children}</Text>
             </View>
-        </TouchableWithoutFeedback>
+        </Link>
     );
 };
 
