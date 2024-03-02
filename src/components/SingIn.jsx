@@ -13,8 +13,9 @@ const styles = StyleSheet.create({
     gap: 10
   },
   input: {
-    border: "1px solid gray",
-    borderRadius: "5px",
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5,
     padding: 6,
   },
   button: {
