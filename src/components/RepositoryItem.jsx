@@ -11,8 +11,9 @@ const RepositoryItem = ({ item }) => {
         reviewCount: reviews,
         ratingAverage: rating,
     } = item;
-    const formatForks = (forks >= 1000 ? (forks / 1000).toFixed(1) + "k" : forks).replace('.0', '');
-    const formatStars = stars >= 1000 ? (stars / 1000).toFixed(1) + "k" : stars;
+
+    const formatForks = (forks >= 1000 ? (forks / 1000).toFixed(1) + "k" : forks).toString().replace('.0k', 'k')
+    const formatStars = (stars >= 1000 ? (stars / 1000).toFixed(1) + "k" : stars).toString().replace('.0k', 'k')
 
     const styles = StyleSheet.create({
         container: {
